@@ -15,4 +15,5 @@ def get_pets_sold(shop):
 def increase_pets_sold(shop, pets_sold):
     shop["admin"]["pets_sold"] += pets_sold
 
-def get_stock_count(self.cc_pet_shop)
+def get_stock_count(shop):
+    return len(shop["pets"])
