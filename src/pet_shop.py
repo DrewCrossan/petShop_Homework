@@ -64,7 +64,9 @@ def add_pet_to_customer(customers, new_pet):
 
 # OPTIONAL TESTS
 
-def customer_can_afford_pet(customers, pet):
-    if  customers["cash"] >= pet["price"]:
+def customer_can_afford_pet(customers, new_pet):
+    if  customers["cash"] >= new_pet["price"]:
         return True
     return False
+
+# def customer_can_afford_pet(customers, new_pet):
