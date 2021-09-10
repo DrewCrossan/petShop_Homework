@@ -25,3 +25,27 @@ def get_pets_by_breed(shop, breed):
             animal.append(pet["breed"])
     return animal
 
+def get_pets_by_breed(shop, breed):
+    animal = []
+    for pet in shop["pets"]:
+        if pet["breed"] == breed:
+            animal.append(pet["breed"])
+    return animal
+
+def find_pet_by_name(shop, name):
+    for pet in shop["pets"]:
+        if pet["name"] == name:
+            return pet
+
+def remove_pet_by_name(shop, name):
+    pet_to_delete = None
+    pet_to_delete = find_pet_by_name(shop, name)
+    for pet in shop["pets"]:
+        if pet["name"] == name:
+            pet_to_delete = pet
+            break   
+    shop["pets"].remove(pet_to_delete)    
+
+
+def add_pet_to_stock(shop, new_pet):
+    shop["pets"].append(new_pet)
